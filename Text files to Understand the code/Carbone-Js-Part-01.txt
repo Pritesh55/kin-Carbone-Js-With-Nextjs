@@ -1,0 +1,86 @@
+Carbone Account
+----------------
+https://account.carbone.io/
+
+
+Register Or Login ::
+-----------------------
+Email id :: iampritesh13@gmail.com
+Passward :: Kashi@281055
+-----------
+
+Here Copy your One important data....
+-----------------------------
+1) Test API key ::
+-----------------------
+test_eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2MjE0OTU2OTUyMzQwMTUzMDgiLCJhdWQiOiJjYXJib25lIiwiZXhwIjoyMzQ1ODAzMjYxLCJkYXRhIjp7ImlkQWNjb3VudCI6IjYyMTQ5NTY5NTIzNDAxNTMwOCJ9fQ.ALjXfqpXOQoob7cz2CCk32pYAQ7HgFvxXdTy7FsfcK_BEtj_yZZy1S8ztJgr-I0punm-2C4aKziPm_DiI_EVuWrbAWDsIywmSFmo_EyRF8Riis9iDqloyBOpbdnr56-qa0sQ2NXnd-_cRMkPjhum8qZHnd9_0BI3WsJJ4o_BXSmMfUiN
+
+Now Click on to Design Templates :: 
+------------------------------------
+
+
+
+
+So It will be redirected to ,
+------------------------------
+https://studio.carbone.io/
+------------------------------
+
+Then Click on :: 
+--------------
+Second Navbar => in Right side => Two icons => 
+1) Info and 2) settings => Click on Info Icon......  
+
+Then Copy your 2nd and 3rd important data....
+---------------------------------------
+2) Filename :: 
+smt5
+
+3) Template ID   ::
+1cc8186b6b3860a372993db880d6b1f01a981ee12ea6fb7308f5715c9ca1705c
+
+-------------------------------------------------------
+
+
+
+
+Then Click on :: 
+--------------
+Second Navbar => Template => Download to Edit 
+-----------------------------------------------
+
+Then open the downloaded .odt file on wordpad....
+--------------------------------------------------
+
+It is designed sample Template of Report....
+We can also create templet like this in wordpad...
+1) two type of text in the template file.....
+1) plain Text 
+2) Variables
+-------------------
+Here Variables are 
+1) in the brackets {}....
+2) starts with d.
+
+{d.id}
+{d.date}
+{d.company.name}
+{d.company.address}
+{d.company.postalCode} {d.company.city}
+
+{d.customer.name}
+{d.customer.address}
+{d.customer.postalCode} {d.customer.city}
+
+
+{d.products[i].name}	
+{d.products[i].priceUnit}	
+{d.products[i].quantity}	
+{d.products[i].priceTotal}
+
+{d.total}
+ 
+-----------------------------
+
+
+

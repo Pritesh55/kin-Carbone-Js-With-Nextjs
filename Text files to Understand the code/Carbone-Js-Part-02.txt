@@ -1,0 +1,277 @@
+Clone Github Repository ::
+-----------------------------
+
+Repo name :: 
+Pritesh55/kin-Carbone-Js-With-Nextjs
+
+Repo link ::
+https://github.com/Pritesh55/kin-Carbone-Js-With-Nextjs
+
+--------------------------------------------------------------
+
+Vercel demo Link ::
+----------------
+https://kin-carbone-js-with-nextjs.vercel.app/
+
+---------------------------------------------------------------
+:: let's Do the "01 thing" :: URL ::
+----------------------------------------
+Then ,  Goto the 
+"Quickstart Carbone Cloud API" Section of 
+"documentation" page of 
+"Carbone-Js" Official Websie....
+
+=> Click on this Section Link :: 
+https://carbone.io/documentation.html#quickstart-carbone-cloud-api
+
+--------------------()---------()---------()-----------------
+
+=> Then Goto 3rd step of that section.....
+-----------------------------------------------
+"3 - Generate a report from the template ID"
+--------------------------------------------
+
+And copy "purply Highlited" Format of the url ::
+
+-----------------------------------------------------------
+:: POST https://render.carbone.io/render/:templateID ::
+-----------------------------------------------------------
+
+--------------------()---------()---------()-----------------
+
+
+-------------------------<>---<>------<>------------------------
+=> So, In our Code, 3 things to be done....
+
+:: axios.post(URL , data, Header_Object) ::
+--------------------------------------------
+
+----------------------
+:: 01 thing :: URL ::
+:: 02 thing :: data ::
+:: 03 thing :: Header_Object ::
+---------------------
+
+:: 01 thing :: URL ::
+-----------------------
+Here URL will be 
+:: https://render.carbone.io/render/:templateID ::
+
+-------------------------<>---<>------<>------------------------
+
+--------------------()---------()---------()-----------------
+:: let's Do the "02 thing" :: Data ::
+
+So, We are on the Page  :: 
+https://carbone.io/documentation.html#quickstart-carbone-cloud-api
+
+=> Then Goto 3rd step of that section.....
+-----------------------------------------------
+Copy this 
+"intial code" of "data" of our  "axios.post" Request" from section.....
+
+------------------------------------
+{
+  "convertTo": "pdf",
+  "data": {
+    "firstname": "John",
+    "lastname": "Wick"
+  }
+}
+------------------------------------
+Then we have to change :: 
+:: this Object's 2nd attribute :: "data" 's value :: 
+:: We will change this "data" atribute's value....
+
+For that, 
+
+Goto :: https://studio.carbone.io/ ::
+:: and copy  :: "the Left section" :: of :: main body ::
+
+--------------------------------------------------------
+{
+  "id": 42,
+  "date": 1492012745,
+  "company": {
+    "name": "myCompany",
+    "address": "here",
+    "city": "Notfar",
+    "postalCode": 123456
+  },
+  "customer": {
+    "name": "myCustomer",
+    "address": "there",
+    "city": "Faraway",
+    "postalCode": 654321
+  },
+  "products": [
+    {
+      "name": "product 1",
+      "priceUnit": 0.1,
+      "quantity": 10,
+      "priceTotal": 1
+    },
+    {
+      "name": "product 2",
+      "priceUnit": 0.2,
+      "quantity": 20,
+      "priceTotal": 4
+    },
+    {
+      "name": "product 3",
+      "priceUnit": 0.3,
+      "quantity": 30,
+      "priceTotal": 9
+    }
+  ],
+  "total": 14
+}
+---------------------------------------------------------------
+This is our "data" atribute's value....
+
+
+--------------------()---------()---------()-----------------
+
+-------------------------<>---<>------<>------------------------
+:: axios.post(URL , data, Header_Object) ::
+--------------------------------------------
+
+:: 02 thing :: Data ::
+-----------------------
+Here data will be 
+::
+		{
+		  "id": 42,
+		  "date": 1492012745,
+		  "company": {
+			"name": "myCompany",
+			"address": "here",
+			"city": "Notfar",
+			"postalCode": 123456
+		  },
+		  "customer": {
+			"name": "myCustomer",
+			"address": "there",
+			"city": "Faraway",
+			"postalCode": 654321
+		  },
+		  "products": [
+			{
+			  "name": "product 1",
+			  "priceUnit": 0.1,
+			  "quantity": 10,
+			  "priceTotal": 1
+			},
+			{
+			  "name": "product 2",
+			  "priceUnit": 0.2,
+			  "quantity": 20,
+			  "priceTotal": 4
+			},
+			{
+			  "name": "product 3",
+			  "priceUnit": 0.3,
+			  "quantity": 30,
+			  "priceTotal": 9
+			}
+		  ],
+		  "total": 14
+		}
+
+::
+
+-------------------------<>---<>------<>------------------------
+
+
+
+
+
+--------------------()---------()---------()-----------------
+:: let's Do the "03 thing" :: HEADER Object ::
+----------------------------------------
+
+
+Intial Header Object is this  ::
+-----------------------------------
+{	
+	headers :	{
+					'Content-Type': 'application/json',
+					'Authorization': 'API_TEST_KEY' ,
+					'carbone-version': '4'
+				}
+}
+------------------------------------------------------
+
+HERE, 2nd attrubute ('Authorization')'s value  :: 
+API_TEST_KEY : ""
+
+One important data from Carbone-Js-Part-1.txt....
+
+or Copy from 
+https://account.carbone.io/ 
+=> My Subscription Box 
+=> Test API key 
+
+=> Email id :: iampritesh13@gmail.com
+=> Passward :: Kashi@281055
+
+
+--------------------()---------()---------()-----------------
+
+
+So, Final POST Request is ::
+----------------------------------
+
+        await axios.post('https://render.carbone.io/render/:1cc8186b6b3860a372993db880d6b1f01a981ee12ea6fb7308f5715c9ca1705c', data, {
+            headers: {
+                'Content-Type': 'application/json',
+                // Here paste your :: (Account data :: 01) Test API key ::
+                'Authorization':
+                    'test_eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2MjE0OTU2OTUyMzQwMTUzMDgiLCJhdWQiOiJjYXJib25lIiwiZXhwIjoyMzQ1ODAzMjYxLCJkYXRhIjp7ImlkQWNjb3VudCI6IjYyMTQ5NTY5NTIzNDAxNTMwOCJ9fQ.ALjXfqpXOQoob7cz2CCk32pYAQ7HgFvxXdTy7FsfcK_BEtj_yZZy1S8ztJgr-I0punm-2C4aKziPm_DiI_EVuWrbAWDsIywmSFmo_EyRF8Riis9iDqloyBOpbdnr56-qa0sQ2NXnd-_cRMkPjhum8qZHnd9_0BI3WsJJ4o_BXSmMfUiN',
+
+                'carbone-version': '4'
+            }
+        }).then((response) => {
+            console.log(response.data.data.renderId);
+            setMyRenderId(response.data.data.renderId);
+        }, (error) => {
+            console.log(error);
+        });
+
+----------------------------------------------------------------
+
+See the Last part of POST Request......
+Response of this Request....
+-----------------------------------
+:: response.data.data.renderId ::
+-----------------------------------
+
+So, "Carbone Cloud API" will give "renderId" in the response of "POST" Request.....
+
+And we will use "useState" to save that Id....
+-----------------------------------------------
+
+const [myRenderId, setMyRenderId] = useState("");
+setMyRenderId(response.data.data.renderId);
+
+-------------------------------------------------------
+
+
+Now , Create a Two Button...........
+1)  To send the data to API via "POST" Request.....
+	and Get the  RenderID of the PDF from API            
+
+    <button onClick={() => { RenderId(); }}>
+			RenderId  
+	</button>
+
+2)  To Download the pdf Created at the "RenderID" Url.....
+
+    <a href={`https://api.carbone.io/render/${myRenderId}`} className="flex justify-center flex-wrap border-2 border-green-600 mx-auto px-5 py-3 text-blue-700">
+	
+        {myRenderId}
+						
+    </a>
+
+	
+-------------------------------------------------------
